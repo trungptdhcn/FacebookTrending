@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FacebookTrending</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_facebook_login">FacebookLoginActivity</string>
+    <string name="let_go">Let\'s go</string>
+    <string name="login_with_facebook">Login with facebook</string>
+    <string name="fb_app_id">435600396635354</string>
+    <string name="fb_name">Facebook Trending</string>
+    <string name="hello_user">Hello %1$s!</string>
+
+</resources>

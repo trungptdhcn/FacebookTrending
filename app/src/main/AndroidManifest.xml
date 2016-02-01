@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gosutv.fbtrending">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.GGApp.Main"
+            android:name=".MyApplication">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider435600396635354"
+                  android:name="com.facebook.FacebookContentProvider"
+                  android:exported="true"/>
+        <receiver android:name=".ui.provider.TrendingFacebookReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.platform.AppCallResultBroadcast"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.facebook.sdk.ApplicationName"
+                   android:value="@string/fb_name"/>
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".Splash"
+                android:label="@string/title_activity_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".FacebookLoginActivity"
+                android:label="@string/title_activity_facebook_login">
+        </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+                  android:configChanges=
+                          "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name"/>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+</manifest>
